@@ -6,7 +6,7 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram.filters import Command
 from dotenv import load_dotenv
-from bot.handlers import link
+from bot.handlers import link, documents, crypto
 
 # Загружаем токен
 load_dotenv()
@@ -55,6 +55,8 @@ async def cmd_start(message: types.Message):
         await message.answer(f"❌ Не удалось подключиться к API:\n{e}")
 
 dp.include_router(link.router)
+dp.include_router(documents.router)
+dp.include_router(crypto.router)
 # --- Запуск ---
 async def main():
     await dp.start_polling(bot)

@@ -52,6 +52,7 @@ class DocumentCreate(DocumentBase):
 class Document(DocumentBase):
     id: int
     created_at: datetime
+    encrypted_data: str   
 
     class Config:
         orm_mode = True

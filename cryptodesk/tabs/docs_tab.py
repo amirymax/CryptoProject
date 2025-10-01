@@ -52,8 +52,10 @@ class DocsTab(QWidget):
             }
 
             resp = requests.post(f"{self.API_URL}/upload", json=payload)
+            no_encrypted_data = resp.json()
+            del no_encrypted_data['encrypted_data']  # 👈 удаляем из лога
             if resp.status_code == 200:
-                self.write_log(f"✅ Загружено: {resp.json()}")
+                self.write_log(f"✅ Загружено: {no_encrypted_data}")
             else:
                 self.write_log(f"❌ Ошибка: {resp.text}")
 
