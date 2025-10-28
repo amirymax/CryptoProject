@@ -29,8 +29,7 @@ def main_menu() -> ReplyKeyboardMarkup:
     kb = [
         [KeyboardButton(text="🔑 Привязать компьютер")],
         [KeyboardButton(text="📂 Мои документы")],
-        [KeyboardButton(text="🔐 Шифрование"), KeyboardButton(text="🔓 Дешифрование")],
-        [KeyboardButton(text="📝 Хэширование")]
+        [KeyboardButton(text="🔐 Шифрование"), KeyboardButton(text="🔓 Дешифрование")]
     ]
     return ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
 
