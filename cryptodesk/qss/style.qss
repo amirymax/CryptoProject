@@ -1,0 +1,90 @@
+/* === Глобальный фон и текст === */
+QWidget {
+    background-color: #1e1f23;
+    color: #e8e8e8;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 13px;
+}
+
+/* === Вкладки === */
+QTabWidget::pane {
+    border: 1px solid #2b2d33;
+    background: #2b2d33;
+    border-radius: 6px;
+}
+
+QTabBar::tab {
+    background: #2b2d33;
+    padding: 6px 14px;
+    border: 1px solid #3a3d45;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-right: 2px;
+    color: #cfd4e0;
+}
+
+QTabBar::tab:selected {
+    background: #3d414b;
+    border-color: #4a8cff;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* === Кнопки (тёмная голубая тема) === */
+QPushButton {
+    background-color: #2d3440;
+    border: 1px solid #4a8cff;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-weight: 500;
+    color: #dfe8ff;
+}
+
+QPushButton:hover {
+    background-color: #3b4557;
+    border-color: #79a7ff;
+}
+
+QPushButton:pressed {
+    background-color: #2b3342;
+    border-color: #396fe0;
+}
+
+/* === Поля ввода === */
+QLineEdit, QTextEdit, QPlainTextEdit {
+    background-color: #2b2d33;
+    border: 1px solid #3a3d45;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+QLineEdit:focus, QTextEdit:focus, QPlainTextEdit:focus {
+    border: 1px solid #4a8cff;
+}
+
+/* === SpinBox === */
+QSpinBox {
+    background-color: #2b2d33;
+    border: 1px solid #3a3d45;
+    border-radius: 6px;
+    padding: 4px;
+    color: #e8e8e8;
+}
+QSpinBox:focus {
+    border: 1px solid #4a8cff;
+}
+
+/* === Scrollbars (минимализм) === */
+QScrollBar:vertical {
+    background: #1e1f23;
+    width: 8px;
+    margin: 2px;
+}
+QScrollBar::handle:vertical {
+    background: #444a53;
+    border-radius: 4px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #586270;
+}

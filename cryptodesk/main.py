@@ -27,10 +27,15 @@ class MainWindow(QMainWindow):
         tabs.addTab(DocsTab(), "Документы в БД")
         
         self.setCentralWidget(tabs)
+        self.resize(1200, 750)
 
 
 def main():
     app = QApplication(sys.argv)
+    # Подключаем стиль
+    with open("cryptodesk/qss/style.qss", "r") as f:
+        app.setStyleSheet(f.read())
+
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
